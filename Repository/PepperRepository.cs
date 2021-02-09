@@ -34,7 +34,7 @@ namespace Repository
             }
         }
 
-        public async Task<string> SavePepperAsync(PepperModel model)
+        public async Task<string> SavePepperAsync(IModel model)
         {
             SqlCommand insert = new SqlCommand("insert into Peppers values(@id, @name);", conn);
 
@@ -99,7 +99,7 @@ namespace Repository
             }
         }
 
-        public async Task<int> UpdatePepperAsync(PepperModel model)
+        public async Task<int> UpdatePepperAsync(IModel model)
         {
             SqlCommand update = new SqlCommand("update Peppers set PepperName = @name where PepperID = @id;", conn); ;
 

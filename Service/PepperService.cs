@@ -20,7 +20,7 @@ namespace Service
             Repository = pepperRepository;
         }
 
-        public async Task<string> SavePepperAsync(PepperModel model)
+        public async Task<string> SavePepperAsync(IModel model)
         {
             return await Repository.SavePepperAsync(model);
         }
@@ -30,7 +30,7 @@ namespace Service
             return await Repository.GetAllPeppersAsync();
         }
 
-        public async Task<int> UpdatePepperAsync(PepperModel model)
+        public async Task<int> UpdatePepperAsync(IModel model)
         {
             return await Repository.UpdatePepperAsync(model);
         }
